@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SSN College Of Engineering</title>
+    <script src="https://kit.fontawesome.com/fd9f59b0c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="box-1">
+            {% for i in name %}
+            <center><h1>Welcome {{ i }}</h1></center>
+            {% endfor %}
+            <h1>Welcome to the Student Attendance Management System (SAMS) at the SSN Campus, Chennai!</h1>
+            <p>
+                SSN Institutions, founded by Dr. Shiv Nadar, Chairman, HCL Technologies, stands out as a premier center
+                of higher learning with a mission of pursuing excellence in education and research. The institutions,
+                with their diverse and dynamic community of students offer a distinctive combination of some of the
+                finest graduate, undergraduate and research programs, accomplished faculty, world class facilities and a
+                residential campus set on a sprawling 250 acres of sylvan surroundings.</p>
+        </div>
+        {% for i in course %}
+        {% if i %}
+        <div class="card-group"></div>
+        <div class = "box-2">
+            <div class="card-body">
+              <h1>{{ i }}</h1>
+              <br>
+                <a class="button" href="{{url_for('edit_attt',cname=i) }}">Edit</a>
+            </div>
+           </div>
+           {% endif %}
+           {% endfor %}
+          </div>
+        </div>
+        <div class="clr">
+        {% for i in course %}
+        {%  if i %}
+        <div class="card-group"></div>
+        <div class="box-2">
+            <div class="card-body">
+                <h1>{{ i }}</h1>
+                <br>
+                <a class="button" href="{{url_for('view',cname = i)}}">View</a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        </body>
+</body>
+</html>

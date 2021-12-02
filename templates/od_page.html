@@ -1,0 +1,48 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/od_page.css')}}">
+      <title>OD approval</title>
+    </head>
+    <body>
+      <div class="container">
+        <div class="box-2">
+      <h1 align="center">UPLOAD OD </h1>
+
+      <form action="{{url_for('od_page',oddata= oddata)}}" method="post" enctype="multipart/form-data">
+        <h5>
+        <label >Name: </label>
+        <input type="text" name="name">
+        <br><br>
+        <label>Register Number: </label>
+        <input type="number" name="reg_no">
+        <br><br>
+        <label>Request Date: </label>
+        <input type="date" id="date" name="date">
+        <br><br>
+
+    <label for="courses">Choose the course:</label>
+    <input alt="Select" list="courses" name="course" id="course">
+    <datalist id="courses">
+      <option value="UIT1501">Finite Automata Theory</option>
+      <option value="UIT1502">Priciples of Operating Systems</option>
+      <option value="UIT1503">Computer Networks and Applications</option>
+      <option value="UIT1504">Introduction to Digital Signal Processing</option>
+      <option value="UIT1505">AI Concepts and Algorithms</option>
+      <option value="UIT1521">Fundamentals of Digital Image Processing</option>
+    </datalist>
+
+  <br><br>
+    Upload the proof for OD (Google Drive Link):
+
+    <input type="text" name="link" id="fileToUpload">
+  <br><br>
+    <input type="submit" value="Upload OD" name="Submit">
+  </h5>
+  </form>
+  </div>
+  </div>
+
+    </body>
+  </html>

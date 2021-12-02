@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <meta charset="utf-8">
+    	<script src="https://kit.fontawesome.com/fd9f59b0c7.js" crossorigin="anonymous"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel= "stylesheet" type= "text/css" href= "static/batchstyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <title>CourseWiseAttendance</title>
+    <!--logo-->
+    <nav class="navbar navbar-expand-lg  navbar-fixed-top">
+        <img src="ssn.png" alt="ssn logo" width="100" height="100"/>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto ">
+      <li class="nav-item ">
+        <i class="fa fa-bell fa-lg"></i>
+
+      </li>
+      <!--user icon-->
+      <li class="nav-item ">
+        <div class="dropdown">
+    <i onclick="myFunction()"  class="fas fa-user-circle fa-lg" ></i>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#home">Switch Account</a>
+      <a href="#about">Logout</a>
+
+    </div>
+    </div>
+    <script>
+
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+    }
+    </script>
+
+        </li>
+        <li class="nav-item ">
+          <div style="font-size:10px; padding-left:10px; padding-right:10px;">Aravindan</div>
+          <div style="padding-top:none; font-size:10px;">HOD</div>
+     </li>
+    </ul>
+    </div>
+    </nav>
+  </head>
+  <body>
+
+
+    <h3 align ="center"> Course Wise Attendance</h3>
+<div class="container" align="center">
+  <div class="box-1">
+    <div class="course">
+     <form action="/sub" method="POST">
+  <label for="courses">Choose the Semester:</label>
+  <input alt="eg:1"  name="sem" id="sem" required>
+
+
+</div>
+<label for="courses">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choose Instace:</label>
+<input type="text" name="it" id="it">
+
+
+</td></tr>
+<tr><td>
+
+
+</td></tr>
+<br>
+<center><input type="submit"></center>
+</form>
+</div>
+</div>
+<br>
+
+
+<div id="Venam"></div>
+
+
+  </body>
+</html>

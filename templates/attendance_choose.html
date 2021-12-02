@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <title>SAMS @ SSN</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box-5">
+			<h1>Choose the course and period: </h1>
+			<label for="subject">Choose a subject:</label>
+			<form class="my-form" action="{{url_for('att_page',data =data )}}" method="post">
+				<select name="course" id="course">
+					<optgroup label="Professional Core">
+						<option value="fat">Finite Automata Theory</option>
+						<option value="pos">Principles of Operating Systems</option>
+						<option value="cna">Computer Networks and its Applications</option>
+						<option value="aica">Artificial Intelligence Concepts and Algorithms</option>
+					</optgroup>
+				<optgroup label="Electrical Sciences">
+					<option value="idsp">Introduction to Digital Signal Processing</option>
+				</optgroup>
+				<optgroup label="Professional Elective">
+					<option value="fdip">Fundamentals of Digital Image Processing</option>
+						<option value="dc">Distributed Computing</option>
+				</optgroup>
+				</select>
+				<div style="margin-top: 100px;"></div>
+				<select name="period" id="period">
+					<option value="cat1">CAT-1</option>
+					<option value="cat2">CAT-2</option>
+					<option value="cat3">CAT-3</option>
+				</select>
+				<div style="margin-top: 100px;"></div>
+				<button type="submit" class="button">Submit</button>
+			</form> 	
+		</div>
+    </div>
+</body>
+</html>

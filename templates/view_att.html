@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/batchstyle.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>view</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="box-1">
+           <h3 align="left">Department: Information Technology</h6>
+           <h3 align = "left">Course:{{ course1 }}</h6>
+           <h3 align="left">Total no of students:7</h6>
+           {% for i in data1 %}
+           <h3 align="left">No of Present:{{ i[0] }}</h6>
+          {% set absent = 7 - i[0]  %}
+          <h3 align="left">No of Absent:{{ absent }}</h6>
+          {% endfor %}
+          </h6>
+      </div>
+      </div>
+    <div class="container">
+        <div class="box-1">
+    <table align="center" width=100%>
+        <center>
+          <thead>
+          <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Register Number</th>
+          <th>Type</th>
+          </tr>
+          </thead>
+            <tbody>
+                {% for res in data %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ res["name"] }}</td>
+                    <td>{{ res["course"] }}</td>
+                    <td>{{ res["reg_no"] }}</td>
+                    {% if class1 =="C1" %}
+                    <td>{{ res["Class1"] }}</td>
+                    {% endif %}
+                    {% if class1 =="C2" %}
+                    <td>{{ res["Class2"] }}</td>
+                    {% endif %}
+                    {% if class1 =="C3" %}
+                    <td>{{ res["Class3"] }}</td>
+                    {% endif %}
+                    {% if class1 =="C4" %}
+                    <td>{{ res["Class4"] }}</td>
+                    {% endif %}
+                    {% if class1 =="C5" %}
+                    <td>{{ res["Class5"] }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+                </tbody>
+        </center>
+    </table>
+</div>
+</div>   
+</body>
+</html>

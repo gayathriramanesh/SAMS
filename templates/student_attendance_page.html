@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Attendance</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+	<script src="https://kit.fontawesome.com/fd9f59b0c7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="box-3">	
+			{% block content %}
+				{% if choice[0]=='fat' %}
+					<h1>Finite Automata Theory</h1>
+				{% elif choice[0]=='pos' %}
+					<h1>Principles of Operating Systems</h1>
+				{% elif choice[0]=='cna' %}
+					<h1>Computer Networks and Applications</h1>
+				{% elif choice[0]=='aica' %}
+					<h1>Artificial Intelligence Concepts and Algorithms</h1>
+				{% elif choice[0]=='idsp' %}
+					<h1>Introduction to Digital Signal Processing</h1>
+				{% elif choice[0]=='fdip' %}
+					<h1>Fundamentals of Digital Image Processing</h1>
+				{% elif choice[0]=='dc' %}
+					<h1>Distributed Computing</h1>
+				{% endif %}
+			{% endblock content %}
+			{% block content2 %}
+				{% if choice[1]=='cat1' %}
+					<h1>CAT-1 Attendance</h1>
+				{% elif choice[1]=='cat2' %}
+					<h1>CAT-2 Attendance</h1>
+				{% else %}
+					<h1>CAT-3 Attendance</h1>
+				{% endif %}
+			{% endblock content2 %}
+			<ul>
+				{% for tot in tot_att %}
+				<li>Number of Days Present: {{ tot[0] }}</li>
+				{% endfor %}
+				<li>Number of Days Absent: 15</li>
+				<li>Attendance Percentage: 86.66%</li>
+				
+			</ul>
+		</div>
+		<div class="clr"></div>
+		<div class="box-4">	
+			<div id="att_table">
+				<table>
+				  <tr>
+					{% for att in att_desc %}
+				    <th scope ="row">{{ att }}</th>
+					{% endfor %}
+				  </tr>
+				  {% for att2 in att_data  %}
+				  <tr>
+					<td>{{ att2[0] }}</td>
+					<td>{{ att2[1] }}</td>
+					<td>{{ att2[2] }}</td>
+					<td>{{ att2[3] }}</td>
+					<td>{{ att2[4] }}</td>
+					<td>{{ att2[5] }}</td>
+				  </tr>
+				  {% endfor %}
+				</table>
+			</div>
+		</div>
+	</div><!-- ./container -->
+</body>
+</html>

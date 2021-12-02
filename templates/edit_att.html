@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Principles of Operating Systems</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style1.css') }}">
+    <script src="https://kit.fontawesome.com/fd9f59b0c7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+    <div id="no_check"></div>
+        <div class="box-3">
+            <h1>Course:{{ course1 }}</h1>
+        </div>
+        <div class="clr"></div>
+        <p><center>{{ success }}</p></center>
+       <form action="{{ url_for('edit_att',cname=course1) }}" class="my-form" method="POST">
+        <div class="box-4">
+            <br>
+            <label for="courses">Choose the class</label>
+            <select name="courses" id="course">
+                <option value="C1">Class 1</option>
+                <option value="C2">Class 2</option>
+                <option value="C3">Class 3</option>
+                <option value="C4">Class 4</option>
+                <option value="C5">Class 5</option>
+            </select>
+            <div id="att_table">
+                <table>
+                    <tr>
+                        <th>Register Number</th>
+                        <th>Name</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                    </tr>
+                    <tr>
+                        <td>195002001</td>
+                        <td>Abhishek Kumar Yadav</td>
+                        <td class="button2">
+                            <input type="radio" id="present" name="student1" value="Present" >
+                            <label for="date"> Present</label><br>
+                        </td>
+                        <td class="button3">
+                            <input type="radio" id="absent" name="student1" value="Absent">
+                            <label for="date"> Absent</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>195002002</td>
+                        <td>Abirami S</td>
+                        <td class="button2">
+                            <input type="radio" id="present" name="student2" value="Present">
+                            <label for="date"> Present</label><br>
+                        </td>
+                        <td class="button3">
+                            <input type="radio" id="absent" name="student2" value="Absent">
+                            <label for="date"> Absent</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>195002003</td>
+                        <td>Adithya Sriram R</td>
+                        <td class="button2">
+                            <input type="radio" id="present" name="student3" value="Present">
+                            <label for="date"> Present</label><br>
+                        </td>
+                        <td class="button3">
+                            <input type="radio" id="absent" name="student3" value="Absent">
+                            <label for="date"> Absent</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>195002004</td>
+                        <td>Aditya R</td>
+                        <td class="button2">
+                            <input type="radio" id="present" name="student4" value="Present">
+                            <label for="date"> Present</label><br>
+                        </td>
+                        <td class="button3">
+                            <input type="radio" id="absent" name="student4" value="Absent">
+                            <label for="date"> Absent</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>195002005</td>
+                        <td>Ajay Murali</td>
+                        <td class="button2">
+                            <input type="radio" id="present" name="student5" value="Present">
+                            <label for="date"> Present</label><br>
+                        </td>
+                        <td class="button3">
+                            <input type="radio" id="absent" name="student5" value="Absent">
+                            <label for="date"> Absent</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>195002006</td>
+                        <td>Akkala Thanmayi</td>
+                        <td class="button2">
+                            <input type="radio" id="present" name="student6" value="Present">
+                            <label for="date"> Present</label><br>
+                        </td>
+                        <td class="button3">
+                            <input type="radio" id="absent" name="student6" value="Absent">
+                            <label for="date"> Absent</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>195002007</td>
+                        <td>Aman Khemka</td>
+                        <td class="button2">
+                            <input type="radio" id="present" name="student7" value="Present">
+                            <label for="date"> Present</label><br>
+                        </td>
+                        <td class="button3">
+                            <input type="radio" id="absent" name="student7" value="Absent">
+                            <label for="date"> Absent</label><br>
+                        </td>
+                    </tr> 
+                </table>
+            </div>
+            <input type="submit" class="btn btn-primary" name="submit" id="btn" onclick=check()>
+        </div>
+        </form>
+    </div>
+    <script>
+      function check()
+       {
+            var rbs = document.querySelectorAll('input[name="student1"]:checked');
+            var rbs1 = document.querySelectorAll('input[name="student2"]:checked');
+            var rbs2 = document.querySelectorAll('input[name="student3"]:checked');
+            var rbs3 = document.querySelectorAll('input[name="student4"]:checked');
+            var rbs4 = document.querySelectorAll('input[name="student5"]:checked');
+            var rbs5 = document.querySelectorAll('input[name="student6"]:checked');
+            var rbs6 = document.querySelectorAll('input[name="student7"]:checked')
+            if(rbs.length<1)
+            { alert("The first student attendance is not registered");
+            }
+            else if(rbs1.length < 1)
+            {
+                alert("The second student attendance is not registered");
+            }
+            else if (rbs2.length < 1) {
+                alert("The third student attendance is not registered");
+            }
+            else if (rbs3.length < 1) {
+                alert("The fourth student attendance is not registered");
+            }
+            else if (rbs4.length < 1) {
+                alert("The fifth student attendance is not registered");
+            }
+            else if (rbs5.length < 1) {
+                alert("The sixth student attendance is not registered");
+            }
+            else if (rbs6.length < 1) {
+                alert("The seventh student attendance is not registered");
+            }
+            else 
+            {
+                alert("The attendance details have been stored successfully.");
+            }
+       }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    font-family: 'Arial';
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.ssn {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.login{
+        width: 637px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background: #7E08A7;
+        border-radius: 15px ;
+
+}
+h1{
+    text-align: center;
+    color: #000000;
+    padding: 20px;
+}
+label{
+    color: #08ffd1;
+    font-size: 17px;
+}
+#email{
+    width: 400px;
+    text-align: center;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 400px;
+    text-align: center;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#log{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+  
+
+}
+span{
+    color: white;
+    font-size: 17px;
+}
+a{
+    background-color: grey;
+    color:blue;
+}

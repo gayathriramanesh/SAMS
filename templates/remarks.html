@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Remarks</title>
+</head>
+<body>
+    <div class ="container">
+        <div class ="box-6">
+            <form class="my-form" action="{{url_for('remarks',remarksdata=remarksdata)}}" method="post">
+                <h1>Submit Remarks Here</h1>
+                <div class="form-group">
+                    <label>Register Number: </label>
+                    <input type="number" name="reg_no">
+                </div>
+                <div class="form-group">
+                    <label>Name: </label>
+                    <input type="text" name="name">
+                </div>
+                <div class="form-group">
+                    <label>Enter the email of the recipient: </label>
+                    <input type="text" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Subject Code: </label>
+                    <input type="text" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="recipient">Choose a recipient:</label>
+                    <select name="recipient" id="recipient">
+                        <optgroup label="Faculty">
+                            <option value="course-Instructor">Course Instructor</option>
+                            <option value="class-Advisor">Class Advisor</option>
+                            <option value="hod">Head of Department</option>
+                            <option value="mentor">Mentor</option>
+                        </optgroup>
+                    </select>
+                </div>			
+                <div class="form-group">
+                    <label>Your Remark: </label>
+                    <input type="text" name="remark">
+                </div>
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

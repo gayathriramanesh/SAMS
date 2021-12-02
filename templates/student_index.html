@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SSN College Of Engineering</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+	<script src="https://kit.fontawesome.com/fd9f59b0c7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class ="box-1">
+			<h1>Hello {{ name }}</h1>
+			<p>Register Number: {{ reg }}</p>
+		</div>
+		<div class="box-1">
+			<h1>Welcome to the Student Attendance Management System (SAMS) at the SSN Campus, Chennai!</h1>
+			<p>
+			SSN Institutions, founded by Dr. Shiv Nadar, Chairman, HCL Technologies, stands out as a premier center of higher learning with a mission of pursuing excellence in education and research. The institutions, with their diverse and dynamic community of students offer a distinctive combination of some of the finest graduate, undergraduate and research programs, accomplished faculty, world class facilities and a residential campus set on a sprawling 250 acres of sylvan surroundings.</p>
+		</div>
+		<div class="box-2">
+			<h1>Priciples of Operating Systems</h1>
+			<p>
+			<a class="button" href="{{url_for('att_page',data=reg)}}">View</a>
+		</div>
+		<div class="box-2">
+			<h1>Fundamentals of Digial Image Processing</h1>
+			<p>
+			<a class="button" href="{{url_for('att_page',data=reg)}}">View</a>
+		</div>
+		<div class="box-2">
+			<h1>Finite Automata Theory</h1>
+			<p>
+			<a class="button" href="{{url_for('att_page',data=reg)}}">View</a>
+		</div>
+		
+		<div class="clr"></div>
+		<div class="categories">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="{{url_for('att_page',data=reg)}}"><i class="fas fa-angle-double-right"></i>  Course-wise Attendance</a></li>
+				<li><a href="{{url_for('att_page',data=reg)}}"><i class="fas fa-angle-double-right"></i>  CAT wise Attendance</a></li>
+				<li><a href="#"><i class="fas fa-angle-double-right"></i>  Overall Attendance</a></li>
+			</ul>
+		</div>
+
+		<div class="clr"></div>
+		
+		<div class="categories2">
+			<a class="button4" href="{{url_for('od_page',oddata=data)}}">Request for OD</a>
+		</div>
+		<div class="clr"></div>
+		<div class ="categories2">
+			<a class = "button4" href="{{url_for('remarks',remarksdata=data)}}">Submit Remarks</a>
+		</div>
+		<div style="margin-top: 500px;"></div>
+	</div><!-- ./container -->
+</body>
+</html>

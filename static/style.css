@@ -1,0 +1,135 @@
+body{
+	background-color: #f4f4f4;
+	color: #000000;
+	font: normal 16px Arial, Helvetica, sans-serif;
+	line-height: 1.6em;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{
+	color: red;
+}
+a:active{
+	color: green;
+}
+.container{
+	width: 80%;
+	margin: auto;
+}
+.button{
+	background-color: darkblue;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+}
+.box-1{
+	background-color: #bb6bc7;
+	color: #000000;
+	border: 5px red solid;
+	border-width: 3px;
+	border-bottom-width: 10px;
+	border-top-style: dotted;
+	padding: 20px ;
+	margin-top: 20px;
+}
+p{
+	margin: 50px 10px 5px 10px;
+}
+.box-2 h1{
+	font: normal 16px Arial, Helvetica, sans-serif;
+	font-family: Tahoma;
+	font-weight: 800;
+	font-style: bold;
+}
+.box-2{
+	background-color: #bb6bc7;
+	color: #000000;
+	border: 3px solid #ccc;
+	padding: 20px;
+	margin: 20px 0;
+	border-image: url('../images/check.png');
+	width: 20%;
+}
+.box2 h1{
+	font-family: Tahoma;
+	font-weight: 200;
+	font-style: bold;
+}
+.box-3 h1{
+	font: normal 16px Arial, Helvetica, sans-serif;
+	font-family: Tahoma;
+	font-weight: 800;
+	font-style: bold;
+}
+.box-3{
+	background-color: #bb6bc7;
+	color: #000000;
+	border: 3px solid #ccc;
+	padding: 20px;
+	margin: 20px 0;
+	border-image: url('../images/check.png');
+	width: 20%;
+}
+.box3 h1{
+	font-family: Tahoma;
+	font-weight: 200;
+	font-style: bold;
+}
+.box-4 h1{
+	font: normal 16px Arial, Helvetica, sans-serif;
+	font-family: Tahoma;
+	font-weight: 800;
+	font-style: bold;
+}
+.box-4{
+	background-color: #bb6bc7;
+	color: #000000;
+	border: 3px solid #ccc;
+	padding: 20px;
+	margin: 20px 0;
+	border-image: url('../images/check.png');
+	width: 20%;
+}
+.box4 h1{
+	font-family: Tahoma;
+	font-weight: 200;
+	font-style: bold;
+}
+
+.categories{
+	border: 1px #ccc solid;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #bb6bc7;
+
+}
+.categories h2{
+	text-align: center;
+}
+.categories ul{
+	padding: 0;
+	padding-left: 50px;
+	list-style: none;
+}
+.categories li{
+	padding-bottom: 8px;
+	border-bottom: dotted 1px #bb6bc7;
+	font-style: bold;
+}
+
+.my-form{
+	padding: 20px;
+}
+.my-form .form-group{
+	padding-bottom: 15px;
+}
+.my-form label{
+	display: block;
+}
+.my-form input[type="text"], .my-form textarea{
+	padding: 8px;
+	width: 100%;
+}

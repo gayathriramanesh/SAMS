@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel= "stylesheet" type= "text/css" href= "static/batchstyle.css">
+    <title>view</title>
+
+  </head>
+  <body>
+    <div class="container">
+        <div class="box-4">
+          <h6 align="left"> Department: IT</h6>
+          <h6 align="left"> Subject:{{cname}} </h6>               <!--be-->     <!--be-->
+          <h6 align="left"> Duration: {{dur}} </h6>                  <!--be-->
+          
+       
+      
+      </div>
+      </div>
+    <div class="container">
+        <div class="box-4">
+    <table align="center" width=100%>
+        <center>
+            <thead>
+                <tr>
+                    <th>Reg.No</th>
+          
+          
+          <th>present</td>
+         
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for res in data %}
+                     
+
+
+                <tr>
+                    <td>{{res["reg_no"]}}</td>
+                    
+                    <td>{{res["present"]}}%</td>
+                    
+                  
+                    
+                </tr>
+                {% endfor %}
+                </tbody>
+
+        </center>
+
+    </table>
+</div>
+</div>   
+  </body>
+</html>
